@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Maine</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <a href="home.html">Taniti</a>
+                <a href="state.html">Home</a>
+                <div class="dropdown">
+                    <button class="dropdown-link">
+                        Tourism
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="restaurant.html">Restaurants</a>
+                        <a href="grocery.html">Grocery</a>
+                        <a href="lodging.html">Lodging</a>
+                        <a href="entertainment.html">Entertainment</a>
+                        <a href="sightseeing.html">Sightseeing</a>
+                        <a href="transport.html">Transport</a>
+                    </div>
+                </div>
+                <a href="contact.html">Contact</a>
+                <div class="search">
+                    <input type="text" placeholder="Search...">
+                </div>
+            </nav>
+        </header>
+        <div class="support-container center">
+            <h1>Have a question?</h1>
+            <form class="center" id="supportForm">
+                <div class="form-row">
+                    <label for="email">Email:</label>
+                    <input onchange='emailCheck()' type="text" name="email" placeholder="example@gmail.com" id="emailInput" class="inputField">
+                </div>
+                <div class="form-row">
+                    <label for="emailConfirm">Confirm Email:</label>
+                    <input onchange="emailCheck()" type="text" name="emailConfirm" placeholder="example@gmail.com" id="confirmEmailInput" class="inputField">
+                </div>
+                <textarea name="supportText" id="supportText" cols="30" rows="5" placeholder="Your comment/question here."></textarea>
+                <button id="formButton" disabled>Submit</button>
+                <p id="errorMessage">Emails do not match.</p>
+            </form>
+        </div>
+    </body>
+    <script>
+        let email_one = document.getElementById('emailInput');
+        let email_two = document.getElementById('confirmEmailInput');
+        let button = document.getElementById('formButton');
+
+        function emailCheck() {
+            if (email_one.value.length == 0 || email_two.value.length == 0) {
+                return;
+            } else if (email_one.value !== email_two.value) {
+                document.getElementById('errorMessage').style.display = 'flex';
+                button.disabled = true;
+            } else {
+                document.getElementById('errorMessage').style.display = 'none';
+                button.disabled = false;
+            }
+        }
+
+        function navClick () {
+            elem = document.getElementById('nav-click')
+
+            if (elem.textContent == 'Nav') {
+                document.getElementById('mobile').style.display = 'flex';
+                elem.textContent = 'Close';
+            } else {
+                document.getElementById('mobile').style.display = 'none';
+                elem.textContent = 'Nav'
+            }
+        }
+    </script>
+</html>

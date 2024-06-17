@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="data.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <title>Lodging</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <a href="home.html">Taniti</a>
+                <a href="home.html">Home</a>
+                <div class="dropdown">
+                    <button class="dropdown-link">
+                        Tourism
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="restaurant.html">Restaurants</a>
+                        <a href="grocery.html">Grocery</a>
+                        <a href="lodging.html">Lodging</a>
+                        <a href="entertainment.html">Entertainment</a>
+                        <a href="sightseeing.html">Sightseeing</a>
+                        <a href="transport.html">Transport</a>
+                    </div>
+                </div>
+                <a href="contact.html">Contact</a>
+                <div class="search">
+                    <input type="text" placeholder="Search...">
+                </div>
+            </nav>
+        </header>
+        <h1 class="page_header">Lodging</h1>
+        <div class="flex">
+            <div class="filters">
+                <h2>Filter Options</h2>
+                <div class="filter">
+                    <p>Store Type:</p>
+                    <select class="filter_input" name="type_selector" id="selector">
+                        <option value="Resort">Resort</option>
+                        <option value="Hotel">Hotel</option>
+                        <option value="Motel">Motel</option>
+                    </select>
+                </div>
+                <div class="filter">
+                    <p>Rating:</p>
+                    <input id="rating_input" class="filter_input" type="number" placeholder="Min Rating" value=0 max="5">
+                </div>
+                <div class="buttons">
+                    <button onclick='applyFilter()''>Apply</button>
+                    <button onclick='listObjects(Lodging)''>Clear</button>
+                </div>
+            </div>
+            <div id="cards"></div>
+        </div>
+    </body>
+    <script>
+        listObjects(Lodging);
+
+        function applyFilter() {
+            selectElement = document.getElementById('selector');
+            ratingElement = document.getElementById('rating_input') 
+            let lodging = Lodging.filter((obj) => obj.type === selectElement.value && obj.rating >= ratingElement.value).sort((a, b) => b.rating - a.rating);
+            document.getElementById('cards').innerHTML = '';
+            listObjects(lodging);
+        }
+
+        function listObjects(array) {
+            document.getElementById('cards').innerHTML = '';
+            array.map((res) => (
+                document.getElementById('cards').innerHTML += `
+                    <div class="card">
+                        <img src="${res.img}" alt="islands restaurant">
+                        <div class="desc">
+                            <div class="info">
+                                <div class="pair">
+                                    <p>Name:</p>
+                                    ${res.name}
+                                </div>
+                                <div class="pair">
+                                    <p>Type:</p>
+                                    ${res.type}
+                                </div>
+                                <div class="pair">
+                                    <p>Rating:</p>
+                                    ${res.rating}/5.0
+                                </div>
+                            </div>
+                            <p>${res.description}</p>
+                        </div>
+                    </div>
+                `
+            ))
+        }
+    </script>
+</html>

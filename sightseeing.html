@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Maine</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <a href="home.html">Taniti</a>
+                <a href="state.html">Home</a>
+                <div class="dropdown">
+                    <button class="dropdown-link">
+                        Tourism
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="restaurant.html">Restaurants</a>
+                        <a href="grocery.html">Grocery</a>
+                        <a href="lodging.html">Lodging</a>
+                        <a href="entertainment.html">Entertainment</a>
+                        <a href="sightseeing.html">Sightseeing</a>
+                        <a href="transport.html">Transport</a>
+                    </div>
+                </div>
+                <a href="contact.html">Contact</a>
+                <div class="search">
+                    <input type="text" placeholder="Search...">
+                </div>
+            </nav>
+        </header>
+        <div class="container">
+            <aside class="state-aside">
+                <img src="./images/Maine-Map.jpg" alt="An image of the state of Maine" />
+                <table class="state-table">
+                    <tbody>
+                        <tr>
+                            <td>Capital:</td>
+                            <td>Augusta</td>
+                        </tr>
+                        <tr>
+                            <td>Population:</td>
+                            <td>1,395,722</td>
+                        </tr>
+                        <tr>
+                            <td>U.S. Senators:</td>
+                            <td>Angus King & Susan Collins</td>
+                        </tr>
+                        <tr>
+                            <td>Date of Admission:</td>
+                            <td>March 15, 1820</td>
+                        </tr>
+                        <tr>
+                            <td>State Bird:</td>
+                            <td>Black-Capped Chickadee</td>
+                        </tr>
+                        <tr>
+                            <td>Total Area (Sq Mi):</td>
+                            <td>35,380</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </aside>
+            <section>
+                <div>
+                    <h2>Cities of Maine</h2>
+                    <table class="city-table">
+                        <thead>
+                            <tr>
+                                <th>City</th>
+                                <th>Population</th>
+                                <th>Avg. Resident Age</th>
+                                <th>Size (Sq. Mi)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Augusta</td>
+                                <td>19,066</td>
+                                <td>44.9 years</td>
+                                <td>58.04</td>
+                            </tr>
+                            <tr>
+                                <td>Bangor</td>
+                                <td>31,588</td>
+                                <td>40.6 years</td>
+                                <td>34.59</td>
+                            </tr>
+                            <tr>
+                                <td>Lewiston</td>
+                                <td>38,593</td>
+                                <td>39.5 years</td>
+                                <td>35.53</td>
+                            </tr>
+                            <tr>
+                                <td>Ogunquit</td>
+                                <td>1,577</td>
+                                <td>66 years</td>
+                                <td>15.25</td>
+                            </tr>
+                            <tr>
+                                <td>Auburn</td>
+                                <td>24,193</td>
+                                <td>39.4 years</td>
+                                <td>65.74</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="lists">
+                    <div>
+                        <h3>Top 3 places to visit in Maine:</h3>
+                        <ol>
+                            <li>Bar Harbor</li>
+                            <li>Baxter State Park</li>
+                            <li>Acadia National Park</li>
+                        </ol>
+                    </div>
+                    <div>
+                        <h3>Possible Natural Disasters:</h3>
+                        <ul>
+                            <li>Flooding</li>
+                            <li>Hurricanes</li>
+                            <li>Wildfires</li>
+                            <li>Earthquakes</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="learn-more">
+                    <a href="https://www.maine.gov/portal/index.html" target="_blank">Learn more about Maine</a>
+                </div>
+            </section>
+        </div>
+    </body>
+    <script>
+        function navClick () {
+            elem = document.getElementById('nav-click')
+
+            if (elem.textContent == 'Nav') {
+                document.getElementById('mobile').style.display = 'flex';
+                elem.textContent = 'Close';
+            } else {
+                document.getElementById('mobile').style.display = 'none';
+                elem.textContent = 'Nav'
+            }
+        }
+    </script>
+</html>

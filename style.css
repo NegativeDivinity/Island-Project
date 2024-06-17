@@ -1,0 +1,378 @@
+html {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    height: 10vh;
+    background-color: navy;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.navbar {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 90%;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+.navbar a {
+    float: left;
+    font-size: medium;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    width: 10%;
+    font-size: 25px;
+}
+
+.dropdown {
+    width: 10%;
+    text-align: center;
+}
+
+.dropdown .dropdown-link {
+    font-size: medium;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    font-size: 25px;
+}
+
+.dropdown-content a:hover {
+    background-color: black;
+    opacity: .5;
+    color: white;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: aliceblue;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    width: 10%;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 20px;
+    width: 90%;
+    padding: 5% 5%;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.search {
+    display: flex;
+    width: 70%;
+    justify-content: end;
+}
+
+.search input {
+    padding: 10px;
+    width: 50%;
+    border-radius: 5px;
+    outline: none;
+}
+
+.container {
+    height: 90vh;
+}
+
+.group_one {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding-top: 2%;
+    height: 50%;
+}
+
+.group_one img {
+    width: 75%;
+    height: 100%;
+}
+
+.group_one h1 {
+    position: absolute;
+    color: white;
+    font-size: 45px;
+    top: 45%;
+}
+
+.group_two {
+    display: flex;
+    justify-content: center;
+}
+
+.about_people {
+    width: 25%;
+}
+
+.about_island {
+    width: 45%;
+    margin-left: 5%;
+}
+
+.page_header {
+    margin: 0;
+    padding: 1% 0;
+    text-align: center;
+    font-size: 40px;
+    text-decoration-line: underline;
+}
+
+.flex  {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5%;
+    width: 90%;
+    height: 100%;
+}
+
+.filters {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    height: 30%;
+    border-radius: 20px;
+    background-color: navy;
+    color: white;
+    margin: 1% 0;
+}
+
+.filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 0;
+    width: 80%;
+    font-size: 20px;
+}
+
+.filter_input {
+    width: 50%;
+    height: 60%;
+    outline: none;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin-top: 2%;
+}
+
+.buttons button {
+    width: 40%;
+    padding: 10px;
+}
+
+#cards {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    height: 100%;
+    width: 65%;
+}
+
+.card {
+    display: flex;
+    border: solid black 2px;
+    margin: 2% 0;
+    height: 15%;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.card img {
+    border-radius: 20px;
+    width: 20%;
+}
+
+.desc {
+    padding-left: 2%;
+}
+
+.info {
+    display: flex;
+}
+
+.pair {
+    display: flex;
+    align-items: center;
+    padding: 1% 5% 0 0;
+}
+
+.pair p {
+    padding-right: 10px;
+}
+
+#supportForm {
+    width: 40%;
+    border: solid black 5px;
+    border-radius: 20px;
+    padding: 3%;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 5%;
+}
+
+#supportForm textarea {
+    width: 100%;
+    resize: none;
+    padding: 5px;
+}
+
+#formButton {
+    width: 40%;
+    margin-top: 5%;
+}
+
+#errorMessage {
+    display: none;
+}
+
+@media screen and (max-width: 960px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .state-aside {
+        flex-direction: row;
+        width: 60%;
+        height: 50%;
+        padding: 0;
+    }
+
+    .state-table {
+        padding-left: 5%;
+    }
+
+    .state-aside img {
+        height: 90%;
+        width: 50%;
+    }
+
+    .info-container table, .info-container tbody {
+        width: 90%;
+    }
+
+    #supportForm {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .navbar {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: flex;
+        align-items: center;
+        width: 90%;
+    }
+
+    #mobile {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 110%;
+        top: 10%;
+        left: 0;
+        background-color: navy;
+        z-index: 3;
+    }
+
+    #mobile a {
+        padding: 5% 0;
+        width: 100%;
+        text-align: center;
+        text-decoration: none;
+        font-size: 20px;
+        color: white;
+    }
+
+    #mobile a:hover {
+        background-color: black;
+        opacity: 0.5;
+    }
+
+    .mobile-nav button {
+        height: 50%;
+        width: 20%;
+    }
+
+    .container aside, section {
+        width: 90%;
+    }
+
+    .state-aside table {
+        float: left;
+    }
+
+    .info-container {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+
+    .info-container section {
+        margin: 5% 0;
+    }
+
+    #img-carousel img {
+        width: 80%;
+    }
+
+    .buttons {
+        width: 40%;
+    }
+    
+    .info-container aside {
+        width: 80%;
+    }
+
+    .info-container section {
+        width: 80%;
+    }
+
+    #supportForm {
+        width: 80%;
+    }
+}
