@@ -165,15 +165,6 @@ let Entertainment = [
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer finibus mauris sed dui convallis, a pretium sem mollis. Cras ut tincidunt ex. Nulla molestie erat sit amet aliquet mattis. Sed tempor libero quis dui iaculis, at interdum erat luctus. Donec eu tristique metus."
     },
     {
-        "activity": "Taniti Museum Tour",
-        "scheduling_required": "No",
-        "phone_number": "888-888-8888",
-        "hours": "8am to 4pm",
-        "rating": 4,
-        "img": "../imgs/act_two.png",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer finibus mauris sed dui convallis, a pretium sem mollis. Cras ut tincidunt ex. Nulla molestie erat sit amet aliquet mattis. Sed tempor libero quis dui iaculis, at interdum erat luctus. Donec eu tristique metus."
-    },
-    {
         "activity": "Fishing Charter",
         "scheduling_required": "Yes",
         "phone_number": "888-888-8888",
@@ -183,7 +174,7 @@ let Entertainment = [
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer finibus mauris sed dui convallis, a pretium sem mollis. Cras ut tincidunt ex. Nulla molestie erat sit amet aliquet mattis. Sed tempor libero quis dui iaculis, at interdum erat luctus. Donec eu tristique metus."
     },
     {
-        "activity": "Snorkling Expedition",
+        "activity": "Snorkling",
         "scheduling_required": "No",
         "phone_number": "888-888-8888",
         "hours": "8am to 4pm",
