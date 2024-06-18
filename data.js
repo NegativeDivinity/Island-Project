@@ -306,3 +306,38 @@ let Transport = [
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer finibus mauris sed dui convallis, a pretium sem mollis. Cras ut tincidunt ex. Nulla molestie erat sit amet aliquet mattis. Sed tempor libero quis dui iaculis, at interdum erat luctus. Donec eu tristique metus."
     }
 ]
+
+let FAQ = [
+    {
+        "question": "What power options are available?",
+        "answer": "Power outlets are 120 volts (the same as in the United States)."
+    },
+    {
+        "question": "What are the time restrictions on alcohol?",
+        "answer": "Alcohol is not allowed to be served or sold between the hours of midnight and 9:00 a.m."
+    },
+    {
+        "question": "What is the legal drinking age in Taniti?",
+        "answer": "The drinking age on Taniti is 18 and the drinking age is not strictly enforced."
+    },
+    {
+        "question": "What is the primary language spoken in Taniti?",
+        "answer": "Many younger Tanitians speak fluent English. Very little English is spoken in rural areas, especially by the older residents."
+    },
+    {
+        "question": "Does the island have proper medical staff?",
+        "answer": "There is one hospital and several clinics. The hospital has many multilingual employees."
+    },
+    {
+        "question": "What is the most common type of crime in Taniti?",
+        "answer": "Violent crime is very rare on Taniti, but as tourism increases, there are more reports of pickpocketing and other petty crimes."
+    },
+    {
+        "question": "When is the island the busiest?",
+        "answer": "Taniti enjoys a large number of national holidays, and many tourist attractions and restaurants will be closed on holidays, so visitors should plan accordingly."
+    },
+    {
+        "question": "What currency is accepted on the island of Taniti?",
+        "answer": "Taniti uses the U.S. dollar as its currency, but many businesses will also accept euros and yen. Several banks facilitate currency exchange, and many businesses accept major credit cards."
+    }
+]

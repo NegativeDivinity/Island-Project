@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="data.js"></script>
         <link rel="stylesheet" href="style.css">
         <title>Maine</title>
     </head>
@@ -10,7 +11,7 @@
         <header>
             <nav class="navbar">
                 <a href="home.html">Taniti</a>
-                <a href="state.html">Home</a>
+                <a href="home.html">Home</a>
                 <div class="dropdown">
                     <button class="dropdown-link">
                         Tourism
@@ -24,33 +25,44 @@
                         <a href="transport.html">Transport</a>
                     </div>
                 </div>
-                <a href="contact.html">Contact</a>
+                <a href="contact.html">FAQ</a>
                 <div class="search">
                     <input type="text" placeholder="Search...">
                 </div>
             </nav>
         </header>
-        <div class="support-container center">
-            <h1>Have a question?</h1>
-            <form class="center" id="supportForm">
-                <div class="form-row">
-                    <label for="email">Email:</label>
-                    <input onchange='emailCheck()' type="text" name="email" placeholder="example@gmail.com" id="emailInput" class="inputField">
+        <div class="contact_container">
+            <div class="faq_container">
+                <h1>FAQ's</h1>
+                <div id="faq_cards">
+    
                 </div>
-                <div class="form-row">
-                    <label for="emailConfirm">Confirm Email:</label>
-                    <input onchange="emailCheck()" type="text" name="emailConfirm" placeholder="example@gmail.com" id="confirmEmailInput" class="inputField">
-                </div>
-                <textarea name="supportText" id="supportText" cols="30" rows="5" placeholder="Your comment/question here."></textarea>
-                <button id="formButton" disabled>Submit</button>
-                <p id="errorMessage">Emails do not match.</p>
-            </form>
+            </div>
+            <div class="support_container">
+                <h1>Don't See Your Question!</h1>
+                <h2>Contact Us Here!</h2>
+                <form class="center" id="supportForm">
+                    <div class="form-row">
+                        <label for="email">Email:</label>
+                        <input onchange='emailCheck()' type="text" name="email" placeholder="example@gmail.com" id="emailInput" class="inputField">
+                    </div>
+                    <div class="form-row">
+                        <label for="emailConfirm">Confirm Email:</label>
+                        <input onchange="emailCheck()" type="text" name="emailConfirm" placeholder="example@gmail.com" id="confirmEmailInput" class="inputField">
+                    </div>
+                    <textarea name="supportText" id="supportText" cols="30" rows="5" placeholder="Your comment/question here."></textarea>
+                    <button id="formButton" disabled>Submit</button>
+                    <p id="errorMessage">Emails do not match.</p>
+                </form>
+            </div>
         </div>
     </body>
     <script>
         let email_one = document.getElementById('emailInput');
         let email_two = document.getElementById('confirmEmailInput');
         let button = document.getElementById('formButton');
+
+        listObjects(FAQ);
 
         function emailCheck() {
             if (email_one.value.length == 0 || email_two.value.length == 0) {
@@ -64,16 +76,22 @@
             }
         }
 
-        function navClick () {
-            elem = document.getElementById('nav-click')
-
-            if (elem.textContent == 'Nav') {
-                document.getElementById('mobile').style.display = 'flex';
-                elem.textContent = 'Close';
-            } else {
-                document.getElementById('mobile').style.display = 'none';
-                elem.textContent = 'Nav'
-            }
+        function listObjects(array) {
+            document.getElementById('faq_cards').innerHTML = '';
+            array.map((res) => (
+                document.getElementById('faq_cards').innerHTML += `
+                    <div class="faq_card">
+                        <div class="pair">
+                            <p>Question:</p>
+                            ${res.question}
+                        </div>
+                        <div class="pair">
+                            <p>Answer:</p>
+                            ${res.answer}
+                        </div>
+                    </div>
+                `
+            ))
         }
     </script>
 </html>

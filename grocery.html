@@ -25,7 +25,7 @@
                         <a href="transport.html">Transport</a>
                     </div>
                 </div>
-                <a href="contact.html">Contact</a>
+                <a href="contact.html">FAQ</a>
                 <div class="search">
                     <input type="text" placeholder="Search...">
                 </div>
@@ -33,23 +33,25 @@
         </header>
         <h1 class="page_header">Grocery</h1>
         <div class="flex">
-            <div class="filters">
-                <h2>Filter Options</h2>
-                <div class="filter">
-                    <p>Store Type:</p>
-                    <select class="filter_input" name="type_selector" id="selector">
-                        <option value="Supermarket">Supermarket</option>
-                        <option value="Grocery Store">Grocery Store</option>
-                        <option value="Convenience Store">Convenience Store</option>
-                    </select>
-                </div>
-                <div class="filter">
-                    <p>Rating:</p>
-                    <input id="rating_input" class="filter_input" type="number" placeholder="Min Rating" value=0 max="5">
-                </div>
-                <div class="buttons">
-                    <button onclick='applyFilter()''>Apply</button>
-                    <button onclick='listObjects(Grocery)''>Clear</button>
+            <div class="left">
+                <div class="filters">
+                    <h2>Filter Options</h2>
+                    <div class="filter">
+                        <p>Store Type:</p>
+                        <select class="filter_input" name="type_selector" id="selector">
+                            <option value="Supermarket">Supermarket</option>
+                            <option value="Grocery Store">Grocery Store</option>
+                            <option value="Convenience Store">Convenience Store</option>
+                        </select>
+                    </div>
+                    <div class="filter">
+                        <p>Rating:</p>
+                        <input id="rating_input" class="filter_input" type="number" placeholder="Min Rating" value=0 max="5">
+                    </div>
+                    <div class="buttons">
+                        <button onclick='applyFilter()''>Apply</button>
+                        <button onclick='listObjects(Grocery)''>Clear</button>
+                    </div>
                 </div>
             </div>
             <div id="cards"></div>
