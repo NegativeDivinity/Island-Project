@@ -3,14 +3,14 @@ let Restaurants = [
         "name": "Islands",
         "cuisine": "American",
         "rating": 4.5,
-        "img": "imgs/res_one.png",
+        "img": "./imgs/res_one.png",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer finibus mauris sed dui convallis, a pretium sem mollis. Cras ut tincidunt ex. Nulla molestie erat sit amet aliquet mattis. Sed tempor libero quis dui iaculis, at interdum erat luctus. Donec eu tristique metus."
     },
     {
         "name": "Some Name 1",
         "cuisine": "Native",
         "rating": 2,
-        "img": "imgs/res_two.png",
+        "img": "./imgs/res_two.png",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer finibus mauris sed dui convallis, a pretium sem mollis. Cras ut tincidunt ex. Nulla molestie erat sit amet aliquet mattis. Sed tempor libero quis dui iaculis, at interdum erat luctus. Donec eu tristique metus."
     },
     {
