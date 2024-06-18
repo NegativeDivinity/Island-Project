@@ -3,14 +3,15 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="data.js"></script>
         <link rel="stylesheet" href="style.css">
-        <title>Maine</title>
+        <title>Transport</title>
     </head>
     <body>
         <header>
             <nav class="navbar">
                 <a href="home.html">Taniti</a>
-                <a href="state.html">Home</a>
+                <a href="home.html">Home</a>
                 <div class="dropdown">
                     <button class="dropdown-link">
                         Tourism
@@ -30,120 +31,86 @@
                 </div>
             </nav>
         </header>
-        <div class="container">
-            <aside class="state-aside">
-                <img src="./images/Maine-Map.jpg" alt="An image of the state of Maine" />
-                <table class="state-table">
-                    <tbody>
-                        <tr>
-                            <td>Capital:</td>
-                            <td>Augusta</td>
-                        </tr>
-                        <tr>
-                            <td>Population:</td>
-                            <td>1,395,722</td>
-                        </tr>
-                        <tr>
-                            <td>U.S. Senators:</td>
-                            <td>Angus King & Susan Collins</td>
-                        </tr>
-                        <tr>
-                            <td>Date of Admission:</td>
-                            <td>March 15, 1820</td>
-                        </tr>
-                        <tr>
-                            <td>State Bird:</td>
-                            <td>Black-Capped Chickadee</td>
-                        </tr>
-                        <tr>
-                            <td>Total Area (Sq Mi):</td>
-                            <td>35,380</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </aside>
-            <section>
-                <div>
-                    <h2>Cities of Maine</h2>
-                    <table class="city-table">
-                        <thead>
-                            <tr>
-                                <th>City</th>
-                                <th>Population</th>
-                                <th>Avg. Resident Age</th>
-                                <th>Size (Sq. Mi)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Augusta</td>
-                                <td>19,066</td>
-                                <td>44.9 years</td>
-                                <td>58.04</td>
-                            </tr>
-                            <tr>
-                                <td>Bangor</td>
-                                <td>31,588</td>
-                                <td>40.6 years</td>
-                                <td>34.59</td>
-                            </tr>
-                            <tr>
-                                <td>Lewiston</td>
-                                <td>38,593</td>
-                                <td>39.5 years</td>
-                                <td>35.53</td>
-                            </tr>
-                            <tr>
-                                <td>Ogunquit</td>
-                                <td>1,577</td>
-                                <td>66 years</td>
-                                <td>15.25</td>
-                            </tr>
-                            <tr>
-                                <td>Auburn</td>
-                                <td>24,193</td>
-                                <td>39.4 years</td>
-                                <td>65.74</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="lists">
-                    <div>
-                        <h3>Top 3 places to visit in Maine:</h3>
-                        <ol>
-                            <li>Bar Harbor</li>
-                            <li>Baxter State Park</li>
-                            <li>Acadia National Park</li>
-                        </ol>
+        <h1 class="page_header">Transport</h1>
+        <div class="flex">
+            <div class="left">
+                <div class="filters">
+                    <h2>Filter Options</h2>
+                    <div class="filter">
+                        <p>Travel Type:</p>
+                        <select class="filter_input" name="type_selector" id="selector">
+                            <option value="Air">Air</option>
+                            <option value="Sea">Sea</option>
+                            <option value="Ground">Ground</option>
+                        </select>
                     </div>
-                    <div>
-                        <h3>Possible Natural Disasters:</h3>
-                        <ul>
-                            <li>Flooding</li>
-                            <li>Hurricanes</li>
-                            <li>Wildfires</li>
-                            <li>Earthquakes</li>
-                        </ul>
+                    <div class="filter">
+                        <p>Transport Type:</p>
+                        <select class="filter_input" name="type_selector" id="transport_type">
+                            <option value="outer_island">Outer Island</option>
+                            <option value="inner_island">Inner Island</option>
+                        </select>
+                    </div>
+                    <div class="buttons">
+                        <button onclick='applyFilter()''>Apply</button>
+                        <button onclick='listObjects(Transport)''>Clear</button>
                     </div>
                 </div>
-                <div class="learn-more">
-                    <a href="https://www.maine.gov/portal/index.html" target="_blank">Learn more about Maine</a>
+                <div class="about">
+                    <h2>Transport</h2>
+                    <p>
+                        Public buses serve Taniti City and run from 5 a.m. to 11 p.m. every day. Private buses serve the rest of the island. 
+                        Taxis are available in Taniti City, and rental cars can be rented from a local rental agency near the airport. 
+                        Bikes and helmets are available to rent from several vendors (helmets are required by law). 
+                        Taniti City is fairly flat and very walkable. Many tourists stay in the area surrounding Merriton Landing: 
+                        this area is easy to explore on foot.
+                    </p>
                 </div>
-            </section>
+            </div>
+            <div id="cards"></div>
         </div>
     </body>
     <script>
-        function navClick () {
-            elem = document.getElementById('nav-click')
+        listObjects(Transport);
 
-            if (elem.textContent == 'Nav') {
-                document.getElementById('mobile').style.display = 'flex';
-                elem.textContent = 'Close';
-            } else {
-                document.getElementById('mobile').style.display = 'none';
-                elem.textContent = 'Nav'
-            }
+        function applyFilter() {
+            selectElement = document.getElementById('selector');
+            transportElement = document.getElementById('transport_type') 
+            let transport = Transport.filter((obj) => obj.transport_type === selectElement.value && obj.transport_dist >= transportElement.value).sort((a, b) => b.rating - a.rating);
+            document.getElementById('cards').innerHTML = '';
+            listObjects(transport);
+        }
+
+        function listObjects(array) {
+            document.getElementById('cards').innerHTML = '';
+            array.map((res) => (
+                document.getElementById('cards').innerHTML += `
+                    <div class="card">
+                        <img src="${res.img}" alt="islands restaurant">
+                        <div class="desc">
+                            <div class="info">
+                                <div class="pair">
+                                    <p>Transport:</p>
+                                    ${res.transport}
+                                </div>
+                                <div class="pair">
+                                    <p>Phone Number:</p>
+                                    ${res.phone_number}
+                                </div>
+                                <div class="pair">
+                                    <p>Type:</p>
+                                    ${res.transport_type}
+                                </div>
+                                <div class="pair">
+                                    <p>Hours:</p>
+                                    ${res.hours}
+                                </div>
+                            </div>
+                            <p>${res.description}</p>
+                        </div>
+                    </div>
+                `
+            ))
         }
     </script>
 </html>

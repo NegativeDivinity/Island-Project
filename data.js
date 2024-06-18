@@ -210,3 +210,99 @@ let Entertainment = [
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer finibus mauris sed dui convallis, a pretium sem mollis. Cras ut tincidunt ex. Nulla molestie erat sit amet aliquet mattis. Sed tempor libero quis dui iaculis, at interdum erat luctus. Donec eu tristique metus."
     }
 ]
+
+let Sightseeing = [
+    {
+        "activity": "Volcano Tour",
+        "scheduling_required": "Yes",
+        "phone_number": "888-888-8888",
+        "hours": "8am to 4pm",
+        "rating": 8.5,
+        "img": "../imgs/act_one.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer finibus mauris sed dui convallis, a pretium sem mollis. Cras ut tincidunt ex. Nulla molestie erat sit amet aliquet mattis. Sed tempor libero quis dui iaculis, at interdum erat luctus. Donec eu tristique metus."
+    },
+    {
+        "activity": "Taniti Museum Tour",
+        "scheduling_required": "No",
+        "phone_number": "888-888-8888",
+        "hours": "8am to 4pm",
+        "rating": 4,
+        "img": "../imgs/act_two.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer finibus mauris sed dui convallis, a pretium sem mollis. Cras ut tincidunt ex. Nulla molestie erat sit amet aliquet mattis. Sed tempor libero quis dui iaculis, at interdum erat luctus. Donec eu tristique metus."
+    },
+    {
+        "activity": "Taniti Boat Tour",
+        "scheduling_required": "Yes",
+        "phone_number": "888-888-8888",
+        "hours": "8am to 4pm",
+        "rating": 6,
+        "img": "../imgs/sig_one.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer finibus mauris sed dui convallis, a pretium sem mollis. Cras ut tincidunt ex. Nulla molestie erat sit amet aliquet mattis. Sed tempor libero quis dui iaculis, at interdum erat luctus. Donec eu tristique metus."
+    },
+    {
+        "activity": "Taniti Bus Tour",
+        "scheduling_required": "No",
+        "phone_number": "888-888-8888",
+        "hours": "8am to 4pm",
+        "rating": 2,
+        "img": "../imgs/sig_two.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer finibus mauris sed dui convallis, a pretium sem mollis. Cras ut tincidunt ex. Nulla molestie erat sit amet aliquet mattis. Sed tempor libero quis dui iaculis, at interdum erat luctus. Donec eu tristique metus."
+    }
+]
+
+let Transport = [
+    {
+        "transport": "Airline",
+        "phone_number": "888-888-8888",
+        "hours": "None Listed",
+        "transport_type": "Air",
+        "transport_dist": "outer_island",
+        "img": "../imgs/tra_one.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer finibus mauris sed dui convallis, a pretium sem mollis. Cras ut tincidunt ex. Nulla molestie erat sit amet aliquet mattis. Sed tempor libero quis dui iaculis, at interdum erat luctus. Donec eu tristique metus."
+    },
+    {
+        "transport": "Cruise Ship",
+        "phone_number": "888-888-8888",
+        "hours": "None Listed",
+        "transport_type": "Sea",
+        "transport_dist": "outer_island",
+        "img": "../imgs/tra_two.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer finibus mauris sed dui convallis, a pretium sem mollis. Cras ut tincidunt ex. Nulla molestie erat sit amet aliquet mattis. Sed tempor libero quis dui iaculis, at interdum erat luctus. Donec eu tristique metus."
+    },
+    {
+        "transport": "Car Rental",
+        "phone_number": "888-888-8888",
+        "hours": "None Listed",
+        "transport_type": "Ground",
+        "transport_dist": "inner_island",
+        "img": "../imgs/tra_three.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer finibus mauris sed dui convallis, a pretium sem mollis. Cras ut tincidunt ex. Nulla molestie erat sit amet aliquet mattis. Sed tempor libero quis dui iaculis, at interdum erat luctus. Donec eu tristique metus."
+    },
+    {
+        "transport": "Bus",
+        "phone_number": "888-888-8888",
+        "hours": "5am to 11pm",
+        "transport_type": "Ground",
+        "transport_dist": "inner_island",
+        "img": "../imgs/tra_four.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer finibus mauris sed dui convallis, a pretium sem mollis. Cras ut tincidunt ex. Nulla molestie erat sit amet aliquet mattis. Sed tempor libero quis dui iaculis, at interdum erat luctus. Donec eu tristique metus."
+    },
+    {
+        "transport": "Taxi",
+        "phone_number": "888-888-8888",
+        "hours": "5am to 11pm",
+        "transport_type": "Ground",
+        "transport_dist": "inner_island",
+        "img": "../imgs/tra_five.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer finibus mauris sed dui convallis, a pretium sem mollis. Cras ut tincidunt ex. Nulla molestie erat sit amet aliquet mattis. Sed tempor libero quis dui iaculis, at interdum erat luctus. Donec eu tristique metus."
+    },
+    {
+        "transport": "Bike Rental",
+        "phone_number": "888-888-8888",
+        "hours": "7am to 4pm",
+        "transport_type": "Ground",
+        "transport_dist": "inner_island",
+        "img": "../imgs/tra_six.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer finibus mauris sed dui convallis, a pretium sem mollis. Cras ut tincidunt ex. Nulla molestie erat sit amet aliquet mattis. Sed tempor libero quis dui iaculis, at interdum erat luctus. Donec eu tristique metus."
+    }
+]

@@ -33,22 +33,35 @@
         </header>
         <h1 class="page_header">Entertainment</h1>
         <div class="flex">
-            <div class="filters">
-                <h2>Filter Options</h2>
-                <div class="filter">
-                    <p>Scheduling Required:</p>
-                    <select class="filter_input" name="type_selector" id="selector">
-                        <option value="Yes">Yes</option>
-                        <option value="No">No</option>
-                    </select>
+            <div class="left">
+                <div class="filters">
+                    <h2>Filter Options</h2>
+                    <div class="filter">
+                        <p>Scheduling Required:</p>
+                        <select class="filter_input" name="type_selector" id="selector">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                    <div class="filter">
+                        <p>Fun Rating:</p>
+                        <input id="rating_input" class="filter_input" type="number" placeholder="Min Rating" value=0 max="10">
+                    </div>
+                    <div class="buttons">
+                        <button onclick='applyFilter()''>Apply</button>
+                        <button onclick='listObjects(Entertainment)''>Clear</button>
+                    </div>
                 </div>
-                <div class="filter">
-                    <p>Fun Rating:</p>
-                    <input id="rating_input" class="filter_input" type="number" placeholder="Min Rating" value=0 max="10">
-                </div>
-                <div class="buttons">
-                    <button onclick='applyFilter()''>Apply</button>
-                    <button onclick='listObjects(Entertainment)''>Clear</button>
+                <div class="about">
+                    <h2>Entertainment</h2>
+                    <p>
+                        Most people visit Taniti to enjoy the beaches, explore the rainforest, and to visit the volcano. 
+                        However, there are other things to do, including visiting a local history museum, going on chartered fishing tours, 
+                        snorkeling, zip-lining in the rainforest, visiting several pubs, including a microbrewery, dancing at a new dance club, 
+                        seeing a movie, taking helicopter rides, playing at an arcade, visiting art galleries, and bowling. 
+                        Also, a nine-hole golf course should be operational by next year. Many of these activities are located in Merriton Landing, 
+                        which is a rapidly developing area on the north side of Yellow Leaf Bay.
+                    </p>
                 </div>
             </div>
             <div id="cards"></div>
@@ -78,7 +91,7 @@
                                     ${res.activity}
                                 </div>
                                 <div class="pair">
-                                    <p>Type:</p>
+                                    <p>Phone Number:</p>
                                     ${res.phone_number}
                                 </div>
                                 <div class="pair">
